@@ -5,14 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super cool epic thing</title>
     <style>
-        #helloworld {
-            
+        body {
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        @media only screen and (max-width: 810px) {
+            #header {
+                font-size: 5vw;
+            }
+        }
+        @media only screen and (min-width: 810px) {
+            #header {
+                font-size: 4em;
+            }
+        }
+        #header {
+            display: flex;
+            align-items: center;
+            height: 3em;
+            color: white;
+            justify-content: center;
+            background-image: url("https://img.freepik.com/free-vector/gradient-liquid-abstract-background_52683-60469.jpg?w=1800&t=st=1687936166~exp=1687936766~hmac=7595815dfbb0a2f4194d22038ce6610a92bbda965794968fec020876c441a6d2");
+            background-size: 100%;
+            min-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 0.2em;
+        }
+        @media only screen and (min-width: 1000px) {
+            .block {
+            display: grid;
+            grid: 30em / 50% 50%;
+        }
+            .textblock {
+                padding: 2em;
+                font-size: 2em;
+                display: flex;
+                color: white;
+                background-color: #140035;
+                align-items: center;
+            }
+            .imageblock {
+                display: flex;
+                padding: 1em;
+                background-color: #811e88;
+                > img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        @media only screen and (max-width: 1000px) {
+            .block {
+                display: grid;
+                grid: 50% 50% / 100%
+        }
+            .textblock {
+                padding: 2em;
+                font-size: 1.5em;
+                display: flex;
+                color: white;
+                background-color: #140035;
+                align-items: center;
+            }
+            .imageblock {
+                display: flex;
+                padding: 1em;
+                background-color: #811e88;
+                > img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     </style>
 </head>
 <body>
-    <div id="helloworld">
+    <div id="header">
         <h1>Hello, World!</h1>
+    </div>
+    <div class="block">
+        <div class="textblock">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste architecto omnis natus eum explicabo maxime cum totam nisi minus ad sapiente reprehenderit dolorum voluptatum voluptatibus eos, voluptatem labore ut soluta!</p>
+        </div>
+        <div class="imageblock">
+            <img src="https://scitechdaily.com/images/Black-Hole-Event-Horizon-Artistic-Illustration.jpg" alt="A rendering of a black hole">
+        </div>
+    </div>
+    <div class="block">
+        <div class="imageblock">
+            <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2022/05/Landscape-Photography-Sophie-Turner.jpg" alt="A rendering of a black hole">
+        </div>
+        <div class="textblock">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta quod temporibus cupiditate quam tempora? Itaque asperiores delectus ea expedita vitae sequi neque aspernatur.</p>
+        </div>
     </div>
 </body>
 </html>
